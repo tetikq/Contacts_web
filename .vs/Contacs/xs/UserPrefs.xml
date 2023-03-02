@@ -1,22 +1,24 @@
 ﻿<Properties StartupConfiguration="{A912E15C-AE92-4E26-9653-14A2B930190F}|https">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Contacs PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Contacs/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Contacs/Models/ShowSearchForm.cs">
     <Files>
       <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.cs" Line="1" Column="1" IsPinned="True" />
       <File FileName="Contacs/Program.cs" Line="43" Column="1" IsPinned="True" />
-      <File FileName="Contacs/Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
-      <File FileName="Contacs/Models/ContactData.cs" Line="14" Column="58" />
-      <File FileName="Contacs/Models/ShowSearchForm.cs" Line="12" Column="30" />
-      <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.Designer.cs" Line="1" Column="1" />
-      <File FileName="Contacs/Data/ApplicationDbContext.cs" Line="16" Column="1" />
+      <File FileName="Contacs/Data/Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="Contacs/Models/ContactData.cs" />
+      <File FileName="Contacs/Models/ShowSearchForm.cs" Line="20" Column="1" />
+      <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.Designer.cs" />
+      <File FileName="Contacs/Data/ApplicationDbContext.cs" />
       <File FileName="Contacs/Controllers/FormController.cs" Line="25" Column="45" />
-      <File FileName="Contacs/Controllers/ContactDataController.cs" Line="30" Column="9" />
-      <File FileName="Contacs/Views/Form/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Contacs/Data/Migrations/20230302200159_ShowSearchForm.cs" Line="1" Column="1" />
+      <File FileName="Contacs/Controllers/ContactDataController.cs" />
+      <File FileName="Contacs/Views/Form/Create.cshtml" />
+      <File FileName="Contacs/Data/Migrations/20230302200159_ShowSearchForm.cs" />
+      <File FileName="Contacs/Views/Form/Index.cshtml" Line="18" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,18 +33,18 @@
                   <Node name="20230302171104_initialsetup.cs" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ShowSearchForm.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
                 <Node name="ContactData" expanded="True" />
                 <Node name="Form" expanded="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

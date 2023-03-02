@@ -8,4 +8,6 @@ enable-migrations
 
 add-migration "initialsetup"
 
+add-migration "ShowSearchForm"
+
 Update-Database

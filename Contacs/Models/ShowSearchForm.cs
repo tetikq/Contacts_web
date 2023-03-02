@@ -8,7 +8,9 @@ namespace Contacs.Models
         public string date { get; set; } = string.Empty;
         
         public string status { get; set; } = string.Empty;
-        
+
+       
+
         public ShowSearchForm()
 		{
 		}
