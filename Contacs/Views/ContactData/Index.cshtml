@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Index";
+
+   
 }
 
 <h1>Rehbere Kişi Ekle/Kaldır</h1>
@@ -37,7 +39,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.UUID)
@@ -53,6 +56,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.location)
+                 
+              
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.company)
@@ -69,3 +75,9 @@
 }
     </tbody>
 </table>
+<div>
+    <h1>        Konuma Göre Filtrele    </h1>
+
+
+
+</div>

@@ -1,24 +1,30 @@
 ﻿<Properties StartupConfiguration="{A912E15C-AE92-4E26-9653-14A2B930190F}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Contacs PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Contacs/Models/ShowSearchForm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Contacs/Controllers/ContactDataController.cs">
     <Files>
-      <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.cs" Line="8" Column="26" IsPinned="True" />
       <File FileName="Contacs/Program.cs" Line="43" Column="1" IsPinned="True" />
-      <File FileName="Contacs/Data/Migrations/ApplicationDbContextModelSnapshot.cs" />
-      <File FileName="Contacs/Models/ContactData.cs" />
-      <File FileName="Contacs/Models/ShowSearchForm.cs" Line="20" Column="1" />
+      <File FileName="Contacs/Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="Contacs/Models/ContactData.cs" Line="1" Column="1" />
+      <File FileName="Contacs/Models/ShowSearchForm.cs" Line="15" Column="4" />
       <File FileName="Contacs/Data/Migrations/20230302171104_initialsetup.Designer.cs" />
       <File FileName="Contacs/Data/ApplicationDbContext.cs" />
       <File FileName="Contacs/Controllers/FormController.cs" Line="25" Column="45" />
-      <File FileName="Contacs/Controllers/ContactDataController.cs" />
-      <File FileName="Contacs/Views/Form/Create.cshtml" />
-      <File FileName="Contacs/Data/Migrations/20230302200159_ShowSearchForm.cs" />
-      <File FileName="Contacs/Views/Form/Index.cshtml" Line="18" Column="12" />
+      <File FileName="Contacs/Controllers/ContactDataController.cs" Line="31" Column="60" />
+      <File FileName="Contacs/Views/Form/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Contacs/Data/Migrations/20230302200159_ShowSearchForm.cs" Line="1" Column="1" />
+      <File FileName="Contacs/Views/Form/Index.cshtml" Line="22" Column="63" />
+      <File FileName="Contacs/Data/Migrations/20230302200159_ShowSearchForm.Designer.cs" Line="1" Column="1" />
+      <File FileName="Contacs/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Contacs/Views/Shared/_Layout.cshtml" Line="26" Column="128" />
+      <File FileName="Contacs/Views/ContactData/Index.cshtml" Line="6" Column="4" />
+      <File FileName="Contacs/Views/ContactData/Create.cshtml" Line="9" Column="2" />
+      <File FileName="Contacs/Views/ContactData/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Contacs/Views/Form/Delete.cshtml" Line="1" Column="37" />
+      <File FileName="Contacs/Views/ContactData/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Contacs/Views/ContactData/Edit.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,18 +33,11 @@
             <Node name="NuGet.Config files" expanded="True" />
             <Node name="Contacs" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="Migrations" expanded="True">
-                  <Node name="00000000000000_CreateIdentitySchema.cs" expanded="True" />
-                  <Node name="20230302171104_initialsetup.cs" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Models" expanded="True">
-                <Node name="ShowSearchForm.cs" selected="True" />
-              </Node>
-              <Node name="Views" expanded="True">
+              <Node name="Views" expanded="True" selected="True">
                 <Node name="ContactData" expanded="True" />
                 <Node name="Form" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -47,4 +46,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

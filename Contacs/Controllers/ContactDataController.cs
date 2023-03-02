@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using Contacs.Data;
 using Contacs.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contacs.Controllers
 {
@@ -27,7 +22,11 @@ namespace Contacs.Controllers
                           Problem("Entity set 'ApplicationDbContext.ContactData'  is null.");
         }
 
-        
+        // GET: ContactData/ShowFilteredData
+        public async Task<IActionResult> ShowFilteredData()
+        {
+            return View();
+        }
 
         // GET: ContactData/Details/5
         public async Task<IActionResult> Details(int? id)
