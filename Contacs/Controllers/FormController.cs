@@ -10,89 +10,87 @@ using Contacs.Models;
 
 namespace Contacs.Controllers
 {
-    public class ContactDataController : Controller
+    public class FormController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ContactDataController(ApplicationDbContext context)
+        public FormController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: ContactData
+        // GET: Form
         public async Task<IActionResult> Index()
         {
-              return _context.ContactData != null ? 
-                          View(await _context.ContactData.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.ContactData'  is null.");
+              return _context.ShowSearchForm != null ? 
+                          View(await _context.ShowSearchForm.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.ShowSearchForm'  is null.");
         }
 
-        
-
-        // GET: ContactData/Details/5
+        // GET: Form/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.ContactData == null)
+            if (id == null || _context.ShowSearchForm == null)
             {
                 return NotFound();
             }
 
-            var contactData = await _context.ContactData
+            var showSearchForm = await _context.ShowSearchForm
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contactData == null)
+            if (showSearchForm == null)
             {
                 return NotFound();
             }
 
-            return View(contactData);
+            return View(showSearchForm);
         }
 
-        // GET: ContactData/Create
+        // GET: Form/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: ContactData/Create
+        // POST: Form/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UUID,name,lastname,Number,location,company,email")] ContactData contactData)
+        public async Task<IActionResult> Create([Bind("Id,UUID,date,status")] ShowSearchForm showSearchForm)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(contactData);
+                _context.Add(showSearchForm);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(contactData);
+            return View(showSearchForm);
         }
 
-        // GET: ContactData/Edit/5
+        // GET: Form/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.ContactData == null)
+            if (id == null || _context.ShowSearchForm == null)
             {
                 return NotFound();
             }
 
-            var contactData = await _context.ContactData.FindAsync(id);
-            if (contactData == null)
+            var showSearchForm = await _context.ShowSearchForm.FindAsync(id);
+            if (showSearchForm == null)
             {
                 return NotFound();
             }
-            return View(contactData);
+            return View(showSearchForm);
         }
 
-        // POST: ContactData/Edit/5
+        // POST: Form/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UUID,name,lastname,Number,location,company,email")] ContactData contactData)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UUID,date,status")] ShowSearchForm showSearchForm)
         {
-            if (id != contactData.Id)
+            if (id != showSearchForm.Id)
             {
                 return NotFound();
             }
@@ -101,12 +99,12 @@ namespace Contacs.Controllers
             {
                 try
                 {
-                    _context.Update(contactData);
+                    _context.Update(showSearchForm);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ContactDataExists(contactData.Id))
+                    if (!ShowSearchFormExists(showSearchForm.Id))
                     {
                         return NotFound();
                     }
@@ -117,49 +115,49 @@ namespace Contacs.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(contactData);
+            return View(showSearchForm);
         }
 
-        // GET: ContactData/Delete/5
+        // GET: Form/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.ContactData == null)
+            if (id == null || _context.ShowSearchForm == null)
             {
                 return NotFound();
             }
 
-            var contactData = await _context.ContactData
+            var showSearchForm = await _context.ShowSearchForm
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contactData == null)
+            if (showSearchForm == null)
             {
                 return NotFound();
             }
 
-            return View(contactData);
+            return View(showSearchForm);
         }
 
-        // POST: ContactData/Delete/5
+        // POST: Form/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.ContactData == null)
+            if (_context.ShowSearchForm == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.ContactData'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.ShowSearchForm'  is null.");
             }
-            var contactData = await _context.ContactData.FindAsync(id);
-            if (contactData != null)
+            var showSearchForm = await _context.ShowSearchForm.FindAsync(id);
+            if (showSearchForm != null)
             {
-                _context.ContactData.Remove(contactData);
+                _context.ShowSearchForm.Remove(showSearchForm);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ContactDataExists(int id)
+        private bool ShowSearchFormExists(int id)
         {
-          return (_context.ContactData?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.ShowSearchForm?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

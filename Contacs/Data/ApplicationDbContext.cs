@@ -11,5 +11,6 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<Contacs.Models.ContactData> ContactData { get; set; } = default!;
+    public DbSet<Contacs.Models.ShowSearchForm> ShowSearchForm { get; set; } = default!;
 }
 
