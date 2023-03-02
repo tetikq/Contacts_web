@@ -5,7 +5,16 @@
 
 <h1>Bölgeye Göre Filtrele</h1>
 
-<form>
-    <label >Bölge giriniz</label>
-    <input type="submit" class="btn btn-danger"/>
+<form asp-action="ShowSearchResults">
+
+    <div class="from-group">
+        <label for="SearchPhrase" class="control-label">Bölge giriniz</label>
+        <input name="SearchPhrase" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary"/>
+
+    </div>
 </form>
+   
