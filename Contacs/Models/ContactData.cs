@@ -3,7 +3,8 @@ namespace Contacs.Models
 {
 	public class ContactData
 	{
-        public int Id { get; set; } 
+        
+        public int Id { get; set; }
         public string UUID { get; set; } = string.Empty;
         public string name { get; set; } = string.Empty;
         public string lastname { get; set; } = string.Empty;
