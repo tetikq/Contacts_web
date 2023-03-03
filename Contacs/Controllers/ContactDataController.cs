@@ -34,9 +34,9 @@ namespace Contacs.Controllers
 
         // POST: ContactData/ShowSearchResult
 
-        public string ShowSearchResult(String SearchPhrase)
+        public async Task<IActionResult> ShowSearchResult(String SearchPhrase)
         {
-            return "you entered: " + SearchPhrase;
+            return View("Index", await _context.ContactData.Where(j => j.location.Contains(SearchPhrase)).ToListAsync());
         }
 
 
