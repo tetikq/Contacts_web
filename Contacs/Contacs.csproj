@@ -24,4 +24,7 @@
     <PackageReference Include="NuGet.PackageManagement" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\ContactData\howFilteredData.cshtml" />
+  </ItemGroup>
 </Project>

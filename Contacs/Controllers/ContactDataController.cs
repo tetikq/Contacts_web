@@ -2,6 +2,8 @@ using Contacs.Data;
 using Contacs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Web;
+
 
 namespace Contacs.Controllers
 {
@@ -22,11 +24,21 @@ namespace Contacs.Controllers
                           Problem("Entity set 'ApplicationDbContext.ContactData'  is null.");
         }
 
-        // GET: ContactData/ShowFilteredData
-        public async Task<IActionResult> ShowFilteredData()
+
+        // GET: ContactData/ShowSearchForm
+
+        public async Task<IActionResult> ShowSearchForm()
         {
             return View();
         }
+
+        // POST: ContactData/ShowSearchResult
+
+        public string ShowSearchResult(String SearchPhrase)
+        {
+            return "you entered: " + SearchPhrase;
+        }
+
 
         // GET: ContactData/Details/5
         public async Task<IActionResult> Details(int? id)
