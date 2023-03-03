@@ -36,6 +36,7 @@ namespace Contacs.Controllers
 
         public async Task<IActionResult> ShowSearchResult(String SearchPhrase)
         {
+            ViewBag.location_name = SearchPhrase;
             return View("Index", await _context.ContactData.Where(j => j.location.Contains(SearchPhrase)).ToListAsync());
         }
 

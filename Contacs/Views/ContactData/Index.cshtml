@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     int table_counter = 0;
+    
    
 }
 
@@ -58,10 +59,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.location)
-                 
-              
-
-            </td>
+               </td>
             <td>
                 @Html.DisplayFor(modelItem => item.company)
             </td>
@@ -76,6 +74,10 @@
         </tr>
 }
     </tbody>
-    <h1> @table_counter Kişi Bulundu</h1>
+    @if (ViewBag.location_name != null)
+        {
+           <h1>@ViewBag.location_name  Konumunda @table_counter Kişi Bulundu</h1> 
+        }
+    
     
 </table>
