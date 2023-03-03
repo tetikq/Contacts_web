@@ -2,6 +2,11 @@
 
 @{
     ViewData["Title"] = "Create";
+
+    Random rnd_form = new Random();
+    int form_uuid = rnd_form.Next(1000, 9999);
+
+    DateTime today = DateTime.Today;
 }
 
 <h1>Create</h1>
@@ -14,12 +19,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UUID" class="control-label"></label>
-                <input asp-for="UUID" class="form-control" />
+                <input asp-for="UUID" class="form-control" value="@form_uuid" readonly/>
                 <span asp-validation-for="UUID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="date" class="control-label"></label>
-                <input asp-for="date" class="form-control" />
+                <input asp-for="date" class="form-control" value="@today" readonly/>
                 <span asp-validation-for="date" class="text-danger"></span>
             </div>
             <div class="form-group">
