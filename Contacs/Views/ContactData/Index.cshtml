@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-
+    int table_counter = 0;
    
 }
 
@@ -39,8 +39,10 @@
         </tr>
     </thead>
     <tbody>
+
 @foreach (var item in Model)
     {
+        table_counter++;
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.UUID)
@@ -74,10 +76,6 @@
         </tr>
 }
     </tbody>
+    <h1> @table_counter Kişi Bulundu</h1>
+    
 </table>
-<div>
-    <h1>        Konuma Göre Filtrele    </h1>
-
-
-
-</div>
